@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue Tutorial</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body class="main">
+    <div id="app">
+        {{ message }}
+    </div>
+
+    <div id="app-2">
+        <span v-bind:title="message">
+            <!-- v-bind attribute is a vue directive -->
+            <!-- title is a HTML attribute that contains text representing advisory information
+            related to the element it belongs to and appears when the element is hovered over-->
+            Hover your mouse over me for a few seconds
+            to see my dynamically bound title!
+        </span>
+    </div>
+
+    <div id="app-3">
+        <span v-if="seen">Now you seee me</span>
+    </div>
+
+    <div id="app-4">
+        <ol>
+            <li v-for="todo in todos">
+                {{ todo.text }}
+            </li>
+        </ol>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <!-- https://vuejs.org/v2/guide/# -->
+    <script src="main.js"></script>
+</body>
+</html>
